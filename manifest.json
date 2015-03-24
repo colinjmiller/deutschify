@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Deutschify",
+  "description": "A handy browser plug-in designed to make reading and writing German easier",
+  "version": "1.0.0",
+
+  "browser_action": {
+    "default_icon": "deutschify.png",
+    "default_popup": "deutschify.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://glosbe.com/"
+  ]
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deutschify</title>
+    <script src="deutschify.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        width: 300px;
+        text-align: center;
+        color: #333333;
+        transition: background-color .2s ease;
+      }
+
+      body, input {
+        font-size: 20px;
+      }
+
+      body.english {
+        background-color: #D5E4FF;
+      }
+
+      body.german {
+        background-color: #FFDDD0;
+      }
+
+      h1 {
+        font-family: 'Lobster', cursive;
+        color: #111111;
+      }
+
+      #others {
+        font-size: 10px;
+        display: none;
+      }
+
+      #results {
+        display: none;
+      }
+
+      #word {
+        height: 31px;
+      }
+    </style>
+  </head>
+  <body class="english">
+    <h1>Deutschify!</h1>
+    <p>From <em id="from">English</em> to <em id="to">German</em><p>
+    <form id="translate">
+      <input id="word" placeholder="English word to translate" /><input type="submit" value="&#8658;" />
+    </form>
+    <div id="results">
+      <p>German: <strong id="result"></strong></p>
+    </div>
+    <p id="others">Seem incorrect? Click below to try again on a different service:
+      <span>
+        <button>dict.cc</button><button>beolingus</button>
+      </span>
+    </p>
+  </body>
+</html>
