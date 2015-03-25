@@ -24,6 +24,15 @@
         background-color: #FFDDD0;
       }
 
+      #german-characters {
+        display: none;
+        margin-top: 5px;
+      }
+
+      #german-characters button {
+        width: 35.5px;
+      }
+
       h1 {
         font-family: 'Lobster', cursive;
         color: #111111;
@@ -35,12 +44,35 @@
         display: none;
       }
 
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: none;
+      }
+
+      .overlay.background {
+        background-color: white;
+        opacity: .8;
+      }
+
+      .overlay.text {
+        font-family: 'Lobster', cursive;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
       p {
         margin: 5px 0;
       }
 
       #results {
         display: none;
+        margin: 10px;
+        border: 1px solid #333333;
       }
 
       #switch {
@@ -62,14 +94,23 @@
     <p>
     <form id="translate">
       <input id="word" placeholder="English word to translate" /><input type="submit" value="&#8658;" />
+      <div id="german-characters">
+        <button class="special-char" data-char="&#196;">&#196;</button>
+        <button class="special-char" data-char="&#228;">&#228;</button>
+        <button class="special-char" data-char="&#214;">&#214;</button>
+        <button class="special-char" data-char="&#246;">&#246;</button>
+        <button class="special-char" data-char="&#220;">&#220;</button>
+        <button class="special-char" data-char="&#252;">&#252;</button>
+        <button class="special-char" data-char="&#223;">&#223;</button>
+      </div>
     </form>
     <div id="results">
-      <p>German: <strong id="result"></strong></p>
+      <p><strong id="result"></strong></p>
     </div>
-    <p id="others">Seem incorrect? Click below to try again on a different service:
-      <span>
-        <button>dict.cc</button><button>beolingus</button>
-      </span>
+    <p id="others">Seem incorrect? Click below to try again on a different service:<br />
+      <a id="dict" href="http://dict.cc" target="_blank">dict.cc</a> | <a id="beolingus" href="http://dict.tu-chemnitz.de/" target="_blank">Beolingus</a>
     </p>
+    <div class="overlay background"></div>
+    <h2 class="overlay text">Deutschifying...</h2>
   </body>
 </html>
