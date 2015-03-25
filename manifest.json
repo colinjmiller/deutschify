@@ -3,9 +3,11 @@
   "name": "Deutschify",
   "description": "A handy browser plug-in designed to make reading and writing German easier",
   "version": "1.0.0",
+  "icons" : {
+    "128": "icon-128.png"
+  },
 
   "browser_action": {
-    "default_icon": "deutschify.png",
     "default_popup": "deutschify.html"
   },
   "permissions": [
