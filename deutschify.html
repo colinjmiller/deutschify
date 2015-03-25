@@ -12,7 +12,7 @@
         transition: background-color .2s ease;
       }
 
-      body, input {
+      body, input, button {
         font-size: 20px;
       }
 
@@ -27,6 +27,7 @@
       h1 {
         font-family: 'Lobster', cursive;
         color: #111111;
+        margin: 10px 0;
       }
 
       #others {
@@ -34,8 +35,18 @@
         display: none;
       }
 
+      p {
+        margin: 5px 0;
+      }
+
       #results {
         display: none;
+      }
+
+      #switch {
+        display: block;
+        margin: auto;
+        margin-top: 10px;
       }
 
       #word {
@@ -45,7 +56,10 @@
   </head>
   <body class="english">
     <h1>Deutschify!</h1>
-    <p>From <em id="from">English</em> to <em id="to">German</em><p>
+    <p>
+      From <em id="from" data-lang="eng">English</em> to <em id="to" data-lang="deu">German</em>
+      <button id="switch">Switch</button>
+    <p>
     <form id="translate">
       <input id="word" placeholder="English word to translate" /><input type="submit" value="&#8658;" />
     </form>
